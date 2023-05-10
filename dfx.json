@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "makotoKun_backend": {
+      "main": "src/makotoKun_backend/main.mo",
+      "type": "motoko"
+    },
+    "makotoKun_frontend": {
+      "dependencies": [
+        "makotoKun_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/makotoKun_frontend/src/index.html"
+      },
+      "source": [
+        "src/makotoKun_frontend/assets",
+        "dist/makotoKun_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
